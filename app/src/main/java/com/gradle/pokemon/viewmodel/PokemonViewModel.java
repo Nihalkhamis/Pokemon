@@ -45,9 +45,12 @@ public class PokemonViewModel extends ViewModel {
                         for (Pokemon pokemon : pokemonsResult){
                             String url = pokemon.getUrl();
                             String[] pokemonIndex = url.split("/");
-                            pokemon.setUrl(" https://pokeres.bastionbot.org/images/pokemon"+pokemonIndex[pokemonIndex.length-1]+".png");
+                            pokemon.setUrl("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+pokemonIndex[pokemonIndex.length-1]+".png");
                         }
-                        return pokemonsResult;                    }
+                        Log.d("TAG", "apply: VIEW MODEL name: "+pokemonsResult.get(0).getName());
+                        Log.d("TAG", "apply: VIEW MODEL image: "+pokemonsResult.get(0).getUrl());
+                        return pokemonsResult;
+                    }
                 })
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(result->pokemonList.setValue(result),
