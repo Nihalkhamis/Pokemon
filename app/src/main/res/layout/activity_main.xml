@@ -8,7 +8,19 @@
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/pokemonRV"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       android:orientation="vertical"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
+
+   <Button
+       android:id="@+id/to_fav_btn"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:text="@string/goToFav"
+       android:layout_marginBottom="@dimen/_10sdp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

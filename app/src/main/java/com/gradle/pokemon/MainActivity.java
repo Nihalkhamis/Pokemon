@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         pokemonRV.setAdapter(pokemonAdapter);
 
-        linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
-
-        pokemonRV.setLayoutManager(linearLayoutManager);
+//        linearLayoutManager = new LinearLayoutManager(this);
+//        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
+//
+//        pokemonRV.setLayoutManager(linearLayoutManager);
 
         pokemonViewModel = new ViewModelProvider(this).get(PokemonViewModel.class);
 
