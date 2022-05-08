@@ -30,9 +30,9 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
         notifyDataSetChanged();
     }
 
-//    public Pokemon getPokemonAt(int position){
-//        return pokemons.get(position);
-//    }
+    public Pokemon getPokemonAt(int position){
+        return pokemons.get(position);
+    }
 
     @NonNull
     @Override

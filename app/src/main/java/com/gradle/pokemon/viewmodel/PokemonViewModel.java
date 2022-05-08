@@ -28,6 +28,10 @@ public class PokemonViewModel extends ViewModel {
     private MutableLiveData<ArrayList<Pokemon>> pokemonList = new MutableLiveData<>();
     private LiveData<List<Pokemon>> favPokemonList = null;
 
+    public LiveData<List<Pokemon>> getFavPokemonList() {
+        return favPokemonList;
+    }
+
     @Inject
     public PokemonViewModel(Repository repository) {
         this.repository = repository;
@@ -71,5 +75,7 @@ public class PokemonViewModel extends ViewModel {
     public void getFavPokemons() {
         favPokemonList = repository.getFavPokemons();
     }
+
+
 
 }
